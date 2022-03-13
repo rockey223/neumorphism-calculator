@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #D1DEF8;
+}
+
+.container{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #D1DEF8;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: -12px -12px 24px #FFFFFF, 12px 12px 24px #5789EC, inset -12px -12px 24px rgba(255, 255, 255, 0.71), inset 12px 12px 24px #7BA4F7;
+}
+
+.calculator{
+    position: relative;
+    display: grid;
+
+}
+
+.calculator .value{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    left: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #D1DEF8;
+    outline: none;
+    background: #D1DEF8;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: inset -9px -9px 15px #ffffff, inset 12px 12px 12px #6993e7;
+    padding: 10px;
+    font-size: 2em;
+
+}
+
+.calculator span{
+    position: relative;
+    display: grid;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    background: #D1DEF8;
+box-shadow: -6px -5px 8px 0px rgb(255 255 255 / 71%), 6px 9px 7px #7ba4f7;
+    border-radius: 50%;
+}
+
+.calculator span i{
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    left: 20px;
+    top: 20px;
+    text-transform: uppercase;
+}
+
+.calculator .clear{
+    grid-column:  span 2;
+    width: 180px;
+    background: #D1DEF8;
+    border-radius: 25px;
+}
+
+.calculator span:hover{
+    box-shadow: inset -10px -6px 9px rgb(255 255 255 / 71%), inset 9px 11px 15px #7ba4f7;
+}
+.calculator .plus{
+    grid-row: span 2;
+    height: 170px;
+    border-radius: 25px;
+}
+
+
+.calculator .equal{
+    background: #D1DEF8;
+}
+
+
+@media screen and (max-width:768px){
+
+    .container{
+        width: 95%;
+        min-height: 545px;
+        padding: 18px 0 0 7px;
+    }
+    .calculator .value{
+        width: calc(100% -32px);
+    }
+    .calculator .clear{
+        width: 146px;
+    }
+
+    .calculator span{
+        height:65px;
+        width: 65px;
+    }
+    .calculator .plus{
+        height: 146px;
+    }
+
+}
